@@ -1,0 +1,33 @@
+{{!-- <p>Main.hbs</p>
+ --}}
+<div class="row loginPage">
+  <div class="col-md-6">
+    <p>Venture</p>
+  </div>
+
+  <div class="col-md-6">
+  <p>Login or Signup</p>
+    <form class="form-horizontal" {{action "login" on="submit"}}>
+      <div class="form-group">
+        <label for="inputUsername" class="col-sm-3 control-label">
+          Username
+        </label>
+        <div class="col-sm-6">
+           {{input id="inputUsername" value=username type="text" class="form-control" placeholder="Username..."}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-3 control-label">
+          Password
+        </label>
+        <div class="col-sm-6">
+           {{input id="inputPassword" value=password type="pasword" class="form-control" placeholder="Password..."}}
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Log in!</button>
+    </form>
+  </div>
+</div>
+{{!-- {{outlet}} --}}
