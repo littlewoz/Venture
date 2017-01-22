@@ -1,33 +1,37 @@
 {{!-- <p>Main.hbs</p>
  --}}
 <div class="row loginPage">
-  <div class="col-md-6">
-    <p>Venture</p>
-  </div>
+ <div class="col-md-1"></div>
+  <div class="col-md-4">
 
-  <div class="col-md-6">
-  <p>Login or Signup</p>
-    <form class="form-horizontal" {{action "login" on="submit"}}>
-      <div class="form-group">
-        <label for="inputUsername" class="col-sm-3 control-label">
-          Username
-        </label>
-        <div class="col-sm-6">
-           {{input id="inputUsername" value=username type="text" class="form-control" placeholder="Username..."}}
+      {{#paper-card}}
+        <img src="assets/images/logo.png" alt="Venture Logo" class="cardLogo">
+        {{#paper-card-content}}
+          <h2>Venture</h2>
+          <p>
+            I really like Venture.
+          </p>
+        {{/paper-card-content}}
+        <div class="md-actions" layout="row" layout-align="end center">
+          {{#paper-button}}Action 1{{/paper-button}}
+          {{#paper-button}}Action 2{{/paper-button}}
         </div>
-      </div>
-
-      <div class="form-group">
-        <label for="inputPassword" class="col-sm-3 control-label">
-          Password
-        </label>
-        <div class="col-sm-6">
-           {{input id="inputPassword" value=password type="pasword" class="form-control" placeholder="Password..."}}
-        </div>
-      </div>
-
-      <button type="submit" class="btn">Log in!</button>
-    </form>
+      {{/paper-card}}
   </div>
+  <div class="col-xs-2"></div>
+  <div class="col-md-4">
+    {{#paper-card}}
+      <form class="form-horizontal" {{action "login" on="submit"}}>
+          <div class="col-sm-6">
+             {{paper-input label="Username" id="inputUsername" value=username type="text" required=true onChange=null}}
+          </div>
+          <div class="col-sm-6">
+             {{paper-input label="Password" id="inputPassword" value=password type="password" required=true onChange=null}}
+          </div>
+        {{paper-button raised=false type="submit" label="Login"}}
+      </form>
+    {{/paper-card}}
+  </div>
+  <div class="col-xs-1"></div>
 </div>
 {{!-- {{outlet}} --}}
